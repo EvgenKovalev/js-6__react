@@ -1,25 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+const exp1 = <div className="some">2 + 3 = {2 + 3}</div>;
+const date = new Date();
+const odd = <div>нечётный</div>
+const even = <div>чётный</div>
+const result = date.getHours() % 2 ? odd : even
+
+const imageURL = 'https://placekitten.com/100/100'
+const image = <img src={imageURL} />
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <header className="App-header">
+    <h1>Привет, мир!</h1> 
+    {image}
+    {exp1}
+    {date.toLocaleTimeString()}
+    {result}
+    </header>
     </div>
-  );
+    );
+   
 }
-
 export default App;
