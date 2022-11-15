@@ -9,13 +9,15 @@ const BasketItem = ({
     title,
     description,
     price,
-    qty     
+    qty,
+    setItems,
+    items 
 }) => {
     return (
         <div className='BasketItem'>
             <ItemInfo title={title} description={description} />
             <ItemPrice value={price} currency={'₽'} />
-            <Counter value={qty} uid={uid} />
+            <Counter value={qty} uid={uid} setItems={setItems} items={items} />
             <ItemPrice value={qty * price} currency={'₽'} />
         </div>
     )
